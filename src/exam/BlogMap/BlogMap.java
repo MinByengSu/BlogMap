@@ -14,11 +14,14 @@ public class BlogMap extends MapActivity {
         setContentView(R.layout.main);
       
     }
+
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
     
-    protected boolean isRouteDisplayed(){
-    	return false;
-    }
-    
+   
     
     
 }
