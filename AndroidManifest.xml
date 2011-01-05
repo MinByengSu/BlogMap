@@ -10,10 +10,15 @@
         android:debuggable="true">
 
         <uses-library android:name="com.google.android.maps" />
+        
+        <provider 
+        	android:name=".provider.SearchHistoryProvider"
+        	android:authorities="com.strastar.provider.BlogMap" />
 
         <activity
             android:name=".activity.MyMapActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
