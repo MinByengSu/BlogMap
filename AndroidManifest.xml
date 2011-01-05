@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="exam.BlogMap"
+    package="com.strastar.android.bsmin.BlogMap"
     android:versionCode="1"
     android:versionName="1.0">
     <application
         android:icon="@drawable/icon"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:debuggable="true">
 
         <uses-library android:name="com.google.android.maps" />
 
         <activity
-            android:name=".BlogMap"
+            android:name=".activity.MyMapActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,9 @@
         </activity>
     </application>
 
-    <users-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" />
     <uses-sdk android:minSdkVersion="7" />
 </manifest> 

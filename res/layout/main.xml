@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-
-
-<com.google.android.maps.MapView 
-    android:id="@+id/map_view"
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
-	 android:layout_height="wrap_content"
-	android:enabled="true"
-	android:clickable="true"
-	android:apiKey="067cHiyTw9wWp6cGgAQBwGs5m3iMALZ6xwTr1ow"
-    />
-
-
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<com.google.android.maps.MapView
+		android:id="@+id/map_view" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:apiKey="@string/map_api_key" />
 </LinearLayout>
