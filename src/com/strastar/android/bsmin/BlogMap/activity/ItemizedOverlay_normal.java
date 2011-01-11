@@ -16,7 +16,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.google.android.maps.*;
+import com.strastar.android.bsmin.BlogMap.R;
 
 public class ItemizedOverlay_normal extends ItemizedOverlay<OverlayItem2>{
 private Context mContext;
@@ -53,6 +55,44 @@ private ArrayList<OverlayItem2> mOverlays = new ArrayList<OverlayItem2>();
 	}
     populate(); 
  }
+ 
+ 
+ 
+ protected boolean onTap(int index) { 
+		final OverlayItem2 item = mOverlays.get(index); 
+			
+		final Dialog dialog = new Dialog(mContext);
+		dialog.setContentView( R.layout.info );
+	   
+		//aa = true;
+
+		dialog.setTitle(item.getTitle());
+		TextView cartext = (TextView)dialog.findViewById(R.id.lat);
+		TextView colorwatertext = (TextView)dialog.findViewById(R.id.lagi);
+		TextView watertext = (TextView)dialog.findViewById(R.id.title);
+	
+
+		TextView addresstext = (TextView)dialog.findViewById(R.id.dialogaddress);
+		addresstext.setText("   "+item.getLat()+item.getLng()+item.getTitle());
+		
+	
+		dialog.setOnKeyListener(new OnKeyListener() {
+			public boolean onKey(DialogInterface dialog, int keyCode,
+					KeyEvent event) {
+				// TODO Auto-generated method stub
+				if(keyCode == 4) {
+					dialog.cancel();
+					return true;
+				}
+				return false;
+			}
+		});
+		dialog.show();
+		return true;
+	}
+
+ 
+ 
  
  
  
