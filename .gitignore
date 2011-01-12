@@ -1,6 +1,7 @@
 bin
 gen
 *.bak
+key.xml
 *.class
 .project
 .classpath
